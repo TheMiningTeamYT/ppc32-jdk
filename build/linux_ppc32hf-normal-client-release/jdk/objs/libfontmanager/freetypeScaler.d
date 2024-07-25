@@ -1,0 +1,33 @@
+/var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/build/linux_ppc32hf-normal-client-release/jdk/objs/libfontmanager/freetypeScaler.o: \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/freetypeScaler.c \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/build/linux_ppc32hf-normal-client-release/jdk/include/jni.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/build/linux_ppc32hf-normal-client-release/jdk/include/linux/jni_md.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/common/jni_util.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/common/jlong.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/solaris/native/common/jlong_md.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/common/jlong.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/sunfontids.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/build/linux_ppc32hf-normal-client-release/jdk/gensrc_headers/sun_font_FreetypeFontScaler.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/ft2build.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/config/ftheader.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/freetype.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/config/ftconfig.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/config/ftoption.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/config/ftstdlib.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/fttypes.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftsystem.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftimage.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/fterrors.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftmoderr.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/fterrdef.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftglyph.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftbbox.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftsizes.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftoutln.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftsynth.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftlcdfil.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftparams.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/freetype/include/freetype2/freetype/ftmodapi.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/fontscaler.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/fontscalerdefs.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/AccelGlyphCache.h

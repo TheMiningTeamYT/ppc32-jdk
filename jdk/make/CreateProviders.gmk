@@ -1,0 +1,83 @@
+#
+# Copyright (c) 2018, Oracle and/or its affiliates. All rights reserved.
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+#
+# This code is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 2 only, as
+# published by the Free Software Foundation.  Oracle designates this
+# particular file as subject to the "Classpath" exception as provided
+# by Oracle in the LICENSE file that accompanied this code.
+#
+# This code is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+# version 2 for more details (a copy is included in the LICENSE file that
+# accompanied this code).
+#
+# You should have received a copy of the GNU General Public License version
+# 2 along with this work; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+#
+# Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+# or visit www.oracle.com if you need additional information or have any
+# questions.
+#
+
+default: all
+
+include $(SPEC)
+include MakeBase.gmk
+include JavaCompilation.gmk
+include Setup.gmk
+
+# The jars created in this file are required for the exploded jdk image to function and
+# cannot wait to be built in the images target.
+
+##########################################################################################
+# Create manifest for provider jar
+#
+# Include these extra attributes for now, should probably take out.
+#
+ifeq ($(JDK_BUILD_OPENJSSE), yes)
+
+ifeq ($(MVN),)
+    MVN  := mvn
+endif
+
+  JCE_JAR_DST := $(JDK_OUTPUTDIR)/lib/jce.jar
+
+  OPENJSSE_JAR_DST := $(JDK_OUTPUTDIR)/lib/ext/openjsse.jar
+  OPENJSSE_JAR_UNSIGNED := $(JDK_OUTPUTDIR)/openjsse/openjsse.jar
+
+  $(OPENJSSE_JAR_UNSIGNED): $(JCE_JAR_DST)
+	$(MVN) package -f $(SRC_ROOT)/openjsse -Djar.finalName=openjsse -Dbuild.bootclasspath=$(JDK_OUTPUTDIR)/classes:$(JDK_OUTPUTDIR)/classes_security -Dbuild.output=$(JDK_OUTPUTDIR)/openjsse
+
+  $(OPENJSSE_JAR_DST): $(OPENJSSE_JAR_UNSIGNED)
+	$(install-file)
+
+  TARGETS += $(OPENJSSE_JAR_UNSIGNED) $(OPENJSSE_JAR_DST)
+endif
+
+ifeq ($(JDK_BUILD_LEGACY8UJSSE), yes)
+
+ifeq ($(MVN),)
+    MVN  := mvn
+endif
+
+  JCE_JAR_DST := $(JDK_OUTPUTDIR)/lib/jce.jar
+
+  LEGACY8UJSSE_JAR_DST := $(JDK_OUTPUTDIR)/lib/ext/legacy8ujsse.jar
+  LEGACY8UJSSE_JAR_UNSIGNED := $(JDK_OUTPUTDIR)/legacy8ujsse/legacy8ujsse.jar
+
+  $(LEGACY8UJSSE_JAR_UNSIGNED): $(JCE_JAR_DST)
+	$(MVN) package -f $(SRC_ROOT)/legacy8ujsse -Djar.finalName=legacy8ujsse -Dbuild.bootclasspath=$(JDK_OUTPUTDIR)/classes:$(JDK_OUTPUTDIR)/classes_security -Dbuild.output=$(JDK_OUTPUTDIR)/legacy8ujsse
+
+  $(LEGACY8UJSSE_JAR_DST): $(LEGACY8UJSSE_JAR_UNSIGNED)
+	$(install-file)
+
+  TARGETS += $(LEGACY8UJSSE_JAR_UNSIGNED) $(LEGACY8UJSSE_JAR_DST)
+endif
+
+all: $(TARGETS)
+
+.PHONY: default all

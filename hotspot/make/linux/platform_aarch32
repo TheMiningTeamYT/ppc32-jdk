@@ -1,0 +1,38 @@
+# Copyright 2013-2017 Azul Systems, Inc.  All Rights Reserved.
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+#
+# This code is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License version 2 only, as published by
+# the Free Software Foundation.
+#
+# This code is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+# A PARTICULAR PURPOSE.  See the GNU General Public License version 2 for more
+# details (a copy is included in the LICENSE file that accompanied this code).
+#
+# You should have received a copy of the GNU General Public License version 2
+# along with this work; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+#
+# Please contact Azul Systems, 385 Moffett Park Drive, Suite 115, Sunnyvale,
+# CA 94089 USA or visit www.azul.com if you need additional information or
+# have any questions.
+
+os_family = linux
+
+arch = aarch32
+
+arch_model = aarch32
+
+os_arch = linux_aarch32
+
+os_arch_model = linux_aarch32
+
+lib_arch = arm
+
+compiler = gcc
+
+# __STDC_LIMIT_MACROS and __STDC_CONSTANT_MACROS required
+# for pre-C++11 toolchains, in order to stdint.h define
+# UINT_MAX, ...
+sysdefs = -DLINUX -D_GNU_SOURCE -DAARCH32 -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS

@@ -1,0 +1,29 @@
+/var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/build/linux_ppc32hf-normal-client-release/jdk/objs/libfontmanager/GlyphPosnLookupProc.o: \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/GlyphPosnLookupProc.cpp \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/LETypes.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/LEStandalone.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/LEFontInstance.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/OpenTypeTables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/LETableReference.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/ICUFeatures.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/Lookups.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/ScriptAndLanguage.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/GlyphDefinitionTables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/ClassDefinitionTables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/GlyphPositioningTables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/GlyphLookupTables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/SinglePositioningSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/ValueRecords.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/GlyphIterator.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/PairPositioningSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/CursiveAttachmentSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/MarkToBasePosnSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/AttachmentPosnSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/MarkToLigaturePosnSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/MarkToMarkPosnSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/ContextualSubstSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/GlyphSubstitutionTables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/LookupProcessor.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/ExtensionSubtables.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/GlyphPosnLookupProc.h \
+ /var/lib/jenkins/ws/workspace/zulu8/linux/ppchf/c1/build/generic/ca/release/crossbuild/zulu8-emb-dev/jdk/src/share/native/sun/font/layout/LESwaps.h
