@@ -82,7 +82,7 @@ NewHandler::handler(size_t) {
 // instead of returning 0. safe_Realloc will return 0 if memblock is not
 // NULL and size is 0. safe_Malloc and safe_Calloc will never return 0.
 void *safe_Malloc(size_t size) throw (std::bad_alloc) {
-    register void *ret_val = malloc(size);
+    void *ret_val = malloc(size);
     if (ret_val == NULL) {
         throw std::bad_alloc();
     }
@@ -91,7 +91,7 @@ void *safe_Malloc(size_t size) throw (std::bad_alloc) {
 }
 
 void *safe_Calloc(size_t num, size_t size) throw (std::bad_alloc) {
-    register void *ret_val = calloc(num, size);
+    void *ret_val = calloc(num, size);
     if (ret_val == NULL) {
         throw std::bad_alloc();
     }
@@ -100,7 +100,7 @@ void *safe_Calloc(size_t num, size_t size) throw (std::bad_alloc) {
 }
 
 void *safe_Realloc(void *memblock, size_t size) throw (std::bad_alloc) {
-    register void *ret_val = realloc(memblock, size);
+    void *ret_val = realloc(memblock, size);
 
     // Special case for realloc.
     if (memblock != NULL && size == 0) {

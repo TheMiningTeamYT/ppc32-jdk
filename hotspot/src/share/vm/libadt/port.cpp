@@ -44,9 +44,9 @@
 
 //------------------------------gcd--------------------------------------------
 // Greatest common divisor
-uint32 gcd( register uint32 x, register uint32 y )
+uint32 gcd( uint32 x, uint32 y )
 {
-  register uint32 tmp;
+  uint32 tmp;
   while( x ) {                  // While not zero
     tmp = x;                    // Hold onto smaller x value
     x = y % x;                  // Compute modulus; since y>=x, 0 <= mod < x
@@ -80,7 +80,7 @@ int fh1( uint32 mask )
 //------------------------------rotate32---------------------------------------
 // Rotate 32bits.  Postive rotates left (bits move toward high-order bit),
 // negative rotates right.
-uint32 rotate32( register uint32 x, register int32 cnt )
+uint32 rotate32( uint32 x, int32 cnt )
 {
   if( cnt >= 0 ) {              // Positive rotates left
     cnt &= 31;                  // Mask off extra shift bits
