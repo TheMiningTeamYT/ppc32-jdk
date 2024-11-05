@@ -728,7 +728,11 @@ inline void MacroAssembler::larx(Register d, Register a, Register b, bool hint_e
 }
 inline void MacroAssembler::stcx_(Register s, Register a, Register b) {
   PPC64_ONLY(stdcx_(s, a, b));
-  NOT_PPC64(stwcx_(s, a, b));
+  NOT_PPC64(
+    // Wii U Espresso Patch
+    dcbst(a, b);
+    stwcx_(s, a, b)
+  );
 }
 inline void MacroAssembler::ti(int tobits, Register a, int si16) {
   PPC64_ONLY(tdi(tobits, a, si16));
@@ -772,7 +776,11 @@ inline void MacroAssembler::larx(Register d, Register b, bool hint_ea) {
 }
 inline void MacroAssembler::stcx_(Register s, Register b) {
   PPC64_ONLY(stdcx_(s, b));
-  NOT_PPC64(stwcx_(s, b));
+  NOT_PPC64(
+    // Wii U Espresso Patch
+    dcbst(b);
+    stwcx_(s, b)
+  );
 }
 inline void MacroAssembler::testbitdi(ConditionRegister cr, Register a, Register s, int ui6) {
   // copypaste from assembler, change rlicr(a, s, 63-ui, 0) to rlicl below

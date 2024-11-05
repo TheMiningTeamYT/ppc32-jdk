@@ -178,6 +178,8 @@ inline jint     Atomic::add    (jint     add_value, volatile jint*     dest) {
     strasm_lwsync
     "1: lwarx   %0,  0, %2    \n"
     "   add     %0, %0, %1    \n"
+    // Wii U Espresso Patch
+    "   dcbst   0,  %2        \n"
     "   stwcx.  %0,  0, %2    \n"
     "   bne-    1b            \n"
     strasm_isync
@@ -197,6 +199,8 @@ inline intptr_t Atomic::add_ptr(intptr_t add_value, volatile intptr_t* dest) {
     strasm_lwsync
     "1:" ptr_larx "  %0,  0, %2    \n"
     "   add          %0, %0, %1    \n"
+    // Wii U Espresso Patch
+    "   dcbst         0, %2        \n"
     "  " ptr_stcx ". %0,  0, %2    \n"
     "   bne-         1b            \n"
     strasm_isync
@@ -220,6 +224,8 @@ inline void Atomic::inc    (volatile jint*     dest) {
     strasm_nobarrier
     "1: lwarx   %0,  0, %2    \n"
     "   addic   %0, %0,  1    \n"
+    // Wii U Espresso Patch
+    "   dcbst   0, %2         \n"
     "   stwcx.  %0,  0, %2    \n"
     "   bne-    1b            \n"
     strasm_nobarrier
@@ -237,6 +243,8 @@ inline void Atomic::inc_ptr(volatile intptr_t* dest) {
     strasm_nobarrier
     "1:" ptr_larx "  %0,  0, %2    \n"
     "   addic        %0, %0,  1    \n"
+    // Wii U Espresso Patch
+    "   dcbst         0, %2        \n"
     "  " ptr_stcx ". %0,  0, %2    \n"
     "   bne-         1b            \n"
     strasm_nobarrier
@@ -259,6 +267,8 @@ inline void Atomic::dec    (volatile jint*     dest) {
     strasm_nobarrier
     "1: lwarx   %0,  0, %2    \n"
     "   addic   %0, %0, -1    \n"
+    // Wii U Espresso Patch
+    "   dcbst   0, %2         \n"
     "   stwcx.  %0,  0, %2    \n"
     "   bne-    1b            \n"
     strasm_nobarrier
@@ -276,6 +286,8 @@ inline void Atomic::dec_ptr(volatile intptr_t* dest) {
     strasm_nobarrier
     "1:" ptr_larx "  %0,  0, %2    \n"
     "   addic        %0, %0, -1    \n"
+    // Wii U Espresso Patch
+    "   dcbst         0, %2        \n"
     "  " ptr_stcx ". %0,  0, %2    \n"
     "   bne-         1b            \n"
     strasm_nobarrier
@@ -303,6 +315,8 @@ inline jint Atomic::xchg(jint exchange_value, volatile jint* dest) {
     /* atomic loop */
     "1:                                                 \n"
     "   lwarx   %[old_value], %[dest], %[zero]          \n"
+    // Wii U Espresso Patch
+    "   dcbst   %[dest], %[zero]                        \n"
     "   stwcx.  %[exchange_value], %[dest], %[zero]     \n"
     "   bne-    1b                                      \n"
     /* isync */
@@ -339,6 +353,8 @@ inline intptr_t Atomic::xchg_ptr(intptr_t exchange_value, volatile intptr_t* des
     /* atomic loop */
     "1:                                                 \n"
     " " ptr_larx "  %[old_value], %[dest], %[zero]      \n"
+    // Wii U Espresso Patch
+    "   dcbst       %[dest], %[zero]                    \n"
     " " ptr_stcx ". %[exchange_value], %[dest], %[zero] \n"
     "   bne-        1b                                  \n"
     /* isync */
@@ -386,6 +402,8 @@ inline jint Atomic::cmpxchg(jint exchange_value, volatile jint* dest, jint compa
     "   lwarx   %[old_value], %[dest], %[zero]          \n"
     "   cmpw    %[compare_value], %[old_value]          \n"
     "   bne-    2f                                      \n"
+    // Wii U Espresso Patch
+    "   dcbst   %[dest], %[zero]                        \n"
     "   stwcx.  %[exchange_value], %[dest], %[zero]     \n"
     "   bne-    1b                                      \n"
     /* acquire */

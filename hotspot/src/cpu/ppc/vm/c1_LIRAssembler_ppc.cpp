@@ -4081,8 +4081,12 @@ void LIR_Assembler::atomic_op(LIR_Code code, LIR_Opr src, LIR_Opr data, LIR_Opr 
     __ lwarx(Rold, Rptr, MacroAssembler::cmpxchgx_hint_atomic_update());
     if (code == lir_xadd) {
       __ add(Rtmp, Rsrc, Rold);
+      // Wii U Espresso Patch
+      __ dcbst(Rptr);
       __ stwcx_(Rtmp, Rptr);
     } else {
+      // Wii U Espresso Patch
+      __ dcbst(Rptr);
       __ stwcx_(Rsrc, Rptr);
     }
   } else if (data->is_oop()) {
@@ -4103,6 +4107,8 @@ void LIR_Assembler::atomic_op(LIR_Code code, LIR_Opr src, LIR_Opr data, LIR_Opr 
       const Register Robj = data->as_register();
       assert_different_registers(Rptr, Rold, Robj);
       __ lwarx(Rold, Rptr, MacroAssembler::cmpxchgx_hint_atomic_update());
+      // Wii U Espresso Patch
+      __ dcbst(Rptr);
       __ stwcx_(Robj, Rptr);
 #endif
   } else if (data->type() == T_LONG) {

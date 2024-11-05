@@ -3174,6 +3174,8 @@ encode %{
     __ bind(Lretry);
     __ lwarx(Rold, Rptr, MacroAssembler::cmpxchgx_hint_atomic_update());
     __ add(Rtmp, Rsrc, Rold);
+    // Wii U Espresso Patch
+    __ dcbst(Rptr);
     __ stwcx_(Rtmp, Rptr);
     if (UseStaticBranchPredictionInCompareAndSwapPPC64) {
       __ bne_predict_not_taken(CCR0, Lretry);
@@ -3223,6 +3225,8 @@ encode %{
     Label Lretry;
     __ bind(Lretry);
     __ lwarx(Rold, Rptr, MacroAssembler::cmpxchgx_hint_atomic_update());
+    // Wii U Espresso Patch
+    __ dcbst(Rptr);
     __ stwcx_(Rsrc, Rptr);
     if (UseStaticBranchPredictionInCompareAndSwapPPC64) {
       __ bne_predict_not_taken(CCR0, Lretry);

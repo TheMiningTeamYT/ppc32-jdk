@@ -1496,6 +1496,8 @@ void MacroAssembler::cmpxchgw(ConditionRegister flag, Register dest_current_valu
   // branch to done  => (flag == ne), (dest_current_value != compare_value)
   // fall through    => (flag == eq), (dest_current_value == compare_value)
 
+  // Wii U Espresso Patch
+  dcbst(addr_base);
   stwcx_(exchange_value, addr_base);
   if (UseStaticBranchPredictionInCompareAndSwapPPC64) {
     bne_predict_not_taken(CCR0, retry); // StXcx_ sets CCR0.
